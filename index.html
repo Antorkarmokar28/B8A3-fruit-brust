@@ -11,11 +11,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- ====== custom css ====== -->
     <link rel="stylesheet" href="style.css">
+    <!-- ====== tailwind custom color ====== -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                "primary-bg-color": '#F85559',
+                "primary-text-color": '#121212',
+                "secondary-text-color": '#F4F4F4',
+              }
+            }
+          }
+        }
+      </script>
 </head>
 <body class="bg-white lato-google-font">
     <!-- ====== header start ====== -->
     <header>
-
+        <!-- ====== navbar====== -->
+        <nav>
+            <div class="container mx-auto">
+                <div class="navbar mt-0 md:mt-6 mb-0 md:mb-6 bg-white md:bg-primary-bg-color rounded-none md:rounded-full py-6 px-12">
+                    <!-- ===== navbar menu inner ====== -->
+                    <div class="hidden lg:block navbar-start">
+                      <div class="hidden lg:block">
+                        <ul class="menu menu-horizontal px-1 text-slate-50">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- ====== navbar logo inner ====== -->
+                    <div class="navbar-center lg:flex gap-2 items-center">
+                      <img class="w-12" src="./images/logo.png" alt="Logo">
+                      <h1 class="text-primary-text-color md:text-slate-50 text-4xl font-bold">Fruit Burst</h1>
+                    </div>
+                    <!-- ====== navbar search input inner ====== -->
+                    <div class="navbar-end">
+                      <form class="relative hidden md:block" action="">
+                        <input class="py-3 px-8 border-none outline-none rounded-full text-secondary-text-color" type="search" placeholder="Search here">
+                        <button class="absolute right-3 top-3"><i class="fa-solid fa-magnifying-glass text-slate-400"></i></button>
+                      </form>
+                    </div>
+                    <!-- ====== dropdown menu icon ====== -->
+                    <div class="block lg:hidden md:ml-16">
+                      <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 md:h-9 md:text-slate-50 w-6 md:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-7 z-[1] p-2 shadow bg-white right-4 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                            <li>
+                              <form class="relative w-3/4" action="">
+                                <input class="py-3 px-3 rounded-full text-secondary-text-color outline-black" type="search" placeholder="Search here">
+                                <button class="absolute right-0 top-4"><i class="fa-solid fa-magnifying-glass text-slate-400"></i></button>
+                              </form>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <!-- ====== header end ====== -->
     <!-- ====== main start ====== -->
@@ -25,7 +88,7 @@
     <!-- ====== main end ====== -->
     <!-- ====== footer start ====== -->
     <footer>
-        
+
     </footer>
     <!-- ====== footer end ====== -->
 </body>
